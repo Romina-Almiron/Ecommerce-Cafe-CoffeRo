@@ -1,0 +1,615 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,300;0,800;1,200;1,400;1,600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html::-webkit-scrollbar{
+    width: .8rem;
+}
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+html::-webkit-scrollbar-thumb{
+    background: #d3ad7f;
+    border-radius: 5rem;
+}
+
+body{
+    font-family:'Prompt', sans-serif; 
+    outline: none;
+    text-decoration: none;
+    line-height: 1.5;
+    background-color:#010103;
+}
+/*-------------Barra de navegación-------*/
+
+.bg-light{
+    background-color:transparent !important;
+}
+
+.navbar-item a {
+    color: #fff;
+    text-decoration: none;
+    margin:3px;
+    transition: 0,3s;
+    font-size: 1rem;
+    text-transform: uppercase; 
+}
+.navbar-item a:hover{
+    color: #d3ad7f;
+    border-bottom:1px solid rgb(255, 255, .3); 
+    padding-bottom: 1px;
+}
+/*------------ICONOS------------------*/
+
+#navbarNav {
+    color: #fff;
+    cursor: pointer;
+}
+#navbarNav :hover{
+    color: #d3ad7f;
+   overflow: hidden;
+   transition: .1s;
+}
+
+/*--------------------INICIO----------------*/
+
+section{
+    padding: 2rem 5%;
+}
+
+
+.inicio{
+    background-image: url("../img/-comprimida.jpg");
+    background-size: cover;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    padding: 4rem 2rem;
+}
+
+
+.inicio .content{
+    display: flex;
+    flex-direction: column;
+   
+}
+.inicio .content h1{
+    color:#fff;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+span{
+    color: #d3ad7f;
+    font-weight: 600;
+}
+
+.btn{
+    padding:.2rem 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    border: 3px solid #d3ad7f;
+    margin-top: 1rem;
+    width: 120px;
+}
+.btn:hover{
+    background: #d3ad7f;
+    color: #010103;
+}
+
+/*-----------------FOOTER---------------*/
+.footer{
+    background: #010103;
+    border-top: 1px solid #d3ad7f;
+    padding: 25px 0;
+    overflow: hidden;
+} 
+.footer .sociales{
+    text-align: center;
+    padding-bottom: 25px;  
+}
+.footer .sociales a{
+    font-size: 24px;
+    color:#fff ;
+    border: 1px solid rgb(255, 255, .3);
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    margin: 0 8px;
+    transition: t;
+}
+.footer .sociales a:hover{
+    background-color: #d3ad7f;
+    transform: scale(1.1) translateY(-4px);
+
+}
+.footer .lista{
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;   
+}
+.footer .lista .lista__link {
+    display: inline-block;
+    padding: 5px;
+}
+.footer .lista .lista__link a{
+    color: #fff;
+    text-decoration: none;
+}
+.footer .lista .lista__link a:hover{
+    color: #d3ad7f;
+    border-bottom:1px solid rgb(255, 255, .3); 
+}
+.footer .copyright{
+    margin-top: 15px;
+    text-align: center;
+    font-size: 13px;
+    color:#d3ad7f ;
+}
+
+/*-----------------NOSOTROS------------*/
+
+main{
+    padding: 3rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+   
+}
+.abaut__titulo  h1{
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+.abaut{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.abaut__info{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background:transparent;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    gap: 1rem;
+}
+.abaut__info h2{
+    font-size: 1.2rem;
+    color: #d3ad7f;
+    font-weight: 300;
+}
+.abaut__info p{
+    color: #fff;
+    font-size: .85rem;
+    line-height: 1.8rem;
+}
+.abaut__info .btn{
+    border: 1px solid #d3ad7f;
+}
+
+/*------------------MENU------------*/
+.menu{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.menu .titulo h1{
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+.grid{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.grid > div{
+    background-size: cover;
+    padding: 1,5rem;
+}
+.grid__card{
+    background-position: center;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 3px solid #d3ad7f;
+}
+.grid__card1{
+    background-image: url("../img/movil3-comprimido.jpg");
+    height: 20rem;
+}
+.grid__card2{
+    background-image: url("../img/movil2-comprimido.jpg");
+    height: 15rem;
+}
+.grid__card3{
+    background-image: url("../img/movil1-comprimido.jpg");
+    height: 20rem;
+}
+.grid__card h5{
+    font-size: 1.9rem;
+    color: #d3ad7f;
+    font-weight: 600;
+}
+.grid__card h4{
+    font-size: 1.5rem;
+    color:#010103;
+    font-weight: 600;
+}
+.grid__precio{
+    color: #fff;
+    font-size: 30px;
+    width: 0;
+    font-weight: 600;
+}
+.btn{
+    border: 3px solid #010103;
+}
+/*---------------PRODUCTOS--------------*/
+
+.producto__titulo h1{
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+
+.producto{
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.caja{
+    display: flex;
+    flex-direction:column;
+    gap: 1.5rem;
+}
+
+.tarjeta{
+   flex: 1;
+   text-align: center;  
+}
+
+.tarjetas{
+    padding: 2rem;
+}
+
+.imagen img{
+    height: 13rem;
+    transition: 1s;
+}
+.imagen img:hover{
+    transform: scale(1.1) translateY(-25px);
+    box-shadow: rgba(251, 253, 254, 0.861) 0px 10px 50px;
+}
+.tarjetas h4{
+    color: #d3ad7f;
+    font-size: 1rem;
+}
+.tarjetas p{
+    font-size: 1rem;
+    color: #fff;
+}
+.tarjeta__precio{
+    color: #fff;
+    font-size: 2rem;
+}
+.tarjeta__precio span{
+    text-decoration: line-through;
+    font-weight: lighter;
+    font-size: 1.2rem;
+}
+.tarjetas .btn{
+    border:1px solid #d3ad7f;
+}
+
+/*---------------CONTACTO----------*/
+
+.contenedor{
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3rem 1.5em;
+}
+.contenedor__titulo h1{
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    padding-bottom: 2rem;
+}
+.contact-wrapper {
+    box-shadow: 0 0 20px  0 rgba(255, 255, 255, .3);
+}
+.contact-wrapper > * {
+    padding: 1em;
+}
+/*---Solo para CONTACT-FORM------*/
+.contact-form {
+    background: transparent;
+    color: #fff;
+}
+.contact-form form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.contact-form form label {
+    display: block;
+}
+.contact-form form p {
+    margin: 0;
+    padding: 1em;
+}
+.contact-form form .block {
+    grid-column: 1 / 3;
+}
+
+.contact-form form input,
+.contact-form form textarea {
+    width: 100%;
+    color: #fff;
+    padding: .4em;
+    border: none;
+    background: none;
+    outline: 0;
+    border-bottom: 1px solid #d3ad7f;
+}
+.block .btn {
+    background: transparent;
+    border: 2px solid #d3ad7f;
+    text-transform: uppercase;
+    padding: 1em;
+}
+.block .btn:hover {
+    background: #fff;
+    color: #010103;
+    cursor: pointer;
+}
+
+/*------contacto info-----*/
+.contact-info {
+    background: linear-gradient(-45deg,#fc5406,#4f362b,#010103);
+    color: #fff;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info h4, .contact-info ul, .contact-info p {
+    text-align: center;
+    margin: 0 0 1rem 0;
+}
+
+
+
+
+
+
+
+
+
+
+/*--------------Desktop-----------------*/
+
+@media (min-width:800px){
+     
+    .navbar-item a{
+        font-size: 1.3rem;
+    }
+
+    /*-----INICIO-----*/
+   
+    .inicio{
+        background-image: url("../img/inicio-comprimida.jpg");
+        padding: 6rem 2rem;
+        min-height: 100vh;
+        background-position: center;
+       
+    }
+    
+    
+    .inicio .content{
+        max-width:50rem ;
+    }
+    
+    
+    .inicio .content h1{
+        font-size: 4rem;
+        color: #d3ad7f;
+    }
+    span{
+        color: #fff;
+    }
+    .btn{
+        background: #010103;
+        font-size: 1.5rem;
+        width: 25%;
+    }
+    .btn:hover{
+        background: #fff;
+        color: #010103;
+        border: 3px solid #d3ad7f;
+    }
+    /*---------NOSOTRSO--------*/
+
+    main{
+        padding: 4rem 4rem;
+    }
+    .abaut__titulo  h1{
+        font-size:3rem;
+        padding-bottom: 2rem;
+        color: #d3ad7f;
+    }
+    .abaut{
+        display: grid;
+        grid-template-columns: repeat(8,1fr);
+    }
+    .abaut > img{
+        max-width: 100%;
+        grid-column: 1/6;
+        grid-row: 1/3;
+        border-radius: 5px;
+    }
+    .abaut__info{
+        grid-column: 5/9;
+        grid-row: 2/3;
+        background-color: #010103;
+        padding: 4rem;
+        text-align: center;
+        border-radius: 1px;
+    } 
+    .abaut__info:hover{
+        cursor: pointer;
+        background: linear-gradient(-45deg,#fc5406,#4f362b,#010103);
+    } 
+    .abaut__info h2{
+        font-size: 2.3rem;
+        text-align: center;
+    }
+    .abaut__info p{
+        font-style: 1rem;
+    } 
+    .abaut__info .btn{
+        border:none;
+        background-color: #d3ad7f;
+    }
+
+    /*---------MENU---------*/
+
+    .menu .titulo h1{
+        font-size: 3rem;
+        color: #d3ad7f;
+        padding-bottom: 2rem;    
+    }
+    .grid__card h5{
+        font-size: 3rem;
+        color: #fff;
+    }
+    .grid__card h4{
+        font-size: 2rem;
+        
+    }
+    .grid__precio{
+        font-size: 30px;
+        text-align: center;
+    }
+    .grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "card1 card1"
+        "card2 card3"
+        ;
+        gap: 3rem;
+    }
+    .grid__card1{
+        grid-area: card1;
+        background-image: url("../img/-comprimido.jpg");
+        height: 400px;
+        padding: 4rem;
+    }
+     .grid__card2{
+        grid-area: card2;
+        background-image: url("../img/menu2-comprimido.jpg");
+        height: 20rem;
+        padding: 2rem;
+    }
+     .grid__card3{
+        grid-area: card3;
+        background-image: url("../img/menu3-comprimida.jpg");
+        padding: 2rem;
+    }
+    .grid__card .btn{
+        background: linear-gradient(-45deg,#fc5406,#4f362b,#010103);
+    }
+
+    /*------------PRODUCTOS----------*/
+
+    .producto__titulo h1{
+        font-size: 3rem;
+        color: #d3ad7f;
+        padding-bottom: 2rem;   
+    }
+    .caja{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        gap:1rem;
+    }
+    .imagen{
+        padding: 2rem 0;
+    }
+    .imagen img{
+        height: 15rem;
+        transition: 1s;
+    }
+    .imagen img:hover{
+        transform: scale(1.1) translateY(-25px);
+        box-shadow: rgba(251, 253, 254, 0.861) 0px 10px 50px;
+    }
+    .tarjetas h4{
+        font-size: 2rem;
+    }
+     .tarjetas p{
+        font-size: .0.7rem;
+    }
+    .tarjeta__precio{
+        font-size: 2.5rem;
+    }
+    .tarjeta__precio span{
+        color: #d3ad7f;
+        text-decoration: line-through;
+        font-weight: lighter;
+        font-size: 1.5rem;
+    }
+    .tarjetas .btn{
+        width: 50%;
+        border: 0;
+        border: 2px solid #d3ad7f;
+    }
+    /*---------contacto-------*/
+    
+    .contenedor__titulo h1{
+        font-size: 3rem;
+        color: #d3ad7f;
+        padding-bottom: 4rem;
+    }
+
+    .contact-wrapper {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+    .contact-wrapper > * {
+        padding: 2em;
+    }
+    .contact-form {
+        font-size: 1.3rem;
+    }
+    .contact-info h4,
+    .contact-info ul,
+    .contact-info p {
+        text-align: center;
+        font-size: 1.2rem;
+        padding: 2rem;
+    }
+}
