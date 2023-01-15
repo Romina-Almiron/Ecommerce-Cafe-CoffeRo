@@ -1,1 +1,27 @@
-@import url("https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,300;0,800;1,200;1,400;1,600&display=swap");/*# sourceMappingURL=main.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,300;0,800;1,200;1,400;1,600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #d3ad7f;
+  border-radius: 5rem;
+}
+
+body {
+  font-family: "Prompt", sans-serif;
+  outline: none;
+  text-decoration: none;
+  line-height: 1.5;
+  background-color: #010103;
+}/*# sourceMappingURL=main.css.map */
