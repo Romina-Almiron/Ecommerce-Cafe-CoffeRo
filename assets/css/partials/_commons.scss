@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,300;0,800;1,200;1,400;1,600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+//colores
+$fondo:#010103;
+$primer-color:#fff;
+$segundo-color:#d3ad7f;
+$tercer-color:linear-gradient(-45deg,#fc5406,#4f362b,#010103);
+
+
+//bordes
+$borde1:rgb(255, 255, .3);
+$borde2:#d3ad7f;
+$borde3:#fff;
+$borde4:#010103;
+$borde5:linear-gradient(-45deg,#fc5406,#4f362b,#010103);
+
+//botones inicio//
+$btn-color1:#fff;
+$btn-color2:#010103;
+$btn-fondo1:#d3ad7f;
+$btn-fondo2:#010103;
+$btn-fondo3:#fff;
+
+//footer//
+%iconitos{
+    font-size: 24px;
+    color:$primer-color;
+    border: 1px solid $borde1;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    margin: 0 8px;
+    transition: t;
+
+        &:hover{
+            background-color: $segundo-color;
+            transform: scale(1.1) translateY(-4px);
+        }
+}
+%links{
+    color: $primer-color;
+    text-decoration: none;
+                
+        &:hover{
+            color: $segundo-color;
+            border-bottom:1px solid $borde1;
+        }
+}
+//boton menu//
+%boton{
+    border: 3px solid $borde4;
+    padding:.2rem 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: $btn-color1;
+    cursor: pointer;
+    margin-top: 1rem;
+    width: 120px;
+
+    &:hover{
+        background: $btn-fondo1;
+        color: $btn-color2;
+    }
+}
+//imagen producto//
+%producto{
+    height: 13rem;
+    transition: 1s;
+
+    &:hover{
+        transform: scale(1.1) translateY(-25px);
+        box-shadow: rgba(251, 253, 254, 0.861) 0px 10px 50px;
+    }
+}
+//contacto//
+%formulario{
+    width: 100%;
+    color: #fff;
+    padding: .4em;
+    border: none;
+    background: none;
+    outline: 0;
+    border-bottom: 1px solid #d3ad7f;
+}
+

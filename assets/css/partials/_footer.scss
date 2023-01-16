@@ -1,0 +1,40 @@
+/*----Footer------*/
+.footer{
+    background: $fondo;
+    border-top: 1px solid $borde2;
+    padding: 25px 0;
+    overflow: hidden;
+
+    .sociales{
+        text-align: center;
+        padding-bottom: 25px;
+        
+        .fa-instagram, .fa-facebook, .fa-twitter, .fa-linkedin{
+            @extend %iconitos;
+        }
+    }
+    .lista{
+        margin-top: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 0;
+        text-align: center; 
+        
+        .lista__link{
+            display: inline-block;
+            padding: 5px;
+            
+            a{
+                @extend %links;
+            }   
+        }
+    }
+    .copyright{
+        margin-top: 15px;
+        text-align: center;
+        font-size: 13px;
+        color:$segundo-color ;
+    }
+} 

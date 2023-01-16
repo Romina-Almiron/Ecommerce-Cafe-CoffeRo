@@ -1,0 +1,90 @@
+/*--------productos----*/
+@mixin flex($direction, $gap){
+    display: flex;
+    flex-direction: $direction;
+    gap: $gap;
+}
+.producto{
+    @include flex(column, 5rem);
+
+    .caja{
+        @include flex(column, 1.5rem);
+
+        .tarjeta{
+            flex: 1;
+            text-align: center;
+            
+            img{
+                @extend %producto;
+            }
+
+            .tarjetas{
+                padding: 2rem;
+
+                h4{
+                    color: #d3ad7f;
+                    font-size: 1rem;
+                }
+                p{
+                    font-size: 1rem;
+                    color: #fff;
+                }
+                .tarjeta__precio{
+                    color: #fff;
+                    font-size: 2rem;
+
+                    span{
+                        text-decoration: line-through;
+                        font-weight: lighter;
+                        font-size: 1.2rem;
+                    }
+                }
+                .btn{
+                    @extend %boton;
+                    border:1px solid #d3ad7f;
+                }
+
+            }
+
+        }
+    }
+
+    @media (min-width:800px){
+
+        .caja{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+            gap:2rem;
+            
+    
+            .imagen{
+                padding: 2rem 0;
+    
+                img{
+                    height: 15rem;
+                    transition: 1s;
+    
+                    &:hover{
+                        transform: scale(1.1) translateY(-25px);
+                        box-shadow: rgba(251, 253, 254, 0.861) 0px 10px 50px;
+                    }
+                }
+            }
+            .tarjetas h4{
+                font-size: 2rem;
+            }
+            .tarjetas p{
+                font-size: .0.7rem;
+            }
+            .tarjeta__precio{
+                font-size: 2.5rem;
+            }
+            span{
+                color: #d3ad7f;
+                text-decoration: line-through;
+                font-weight: lighter;
+                font-size: 1.5rem;
+            }
+        }
+    }
+}

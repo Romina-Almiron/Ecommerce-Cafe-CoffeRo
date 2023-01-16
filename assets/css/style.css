@@ -373,7 +373,7 @@ main{
     outline: 0;
     border-bottom: 1px solid #d3ad7f;
 }
-.block .btn {
+.block .btn{
     background: transparent;
     border: 2px solid #d3ad7f;
     text-transform: uppercase;

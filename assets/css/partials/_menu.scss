@@ -1,0 +1,96 @@
+/*-------MENU-------*/
+.menu{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.grid{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.grid > div{
+    background-size: cover;
+    padding: 1,5rem;
+    background-position: center;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 3px solid #d3ad7f;
+
+    h5{
+        font-size: 1.9rem;
+        color: #d3ad7f;
+        font-weight: 600;
+    }
+    h4{
+        font-size: 1.5rem;
+        color:#010103;
+        font-weight: 600;
+    }
+    .grid__precio{
+        color: #fff;
+        font-size: 30px;
+        width: 0;
+        font-weight: 600;
+    }
+    .btn{
+        @extend %boton;
+    }
+}
+.grid__card1{
+    background-image: url("../img/movil3-comprimido.jpg");
+    height: 20rem;
+}
+.grid__card2{
+    background-image: url("../img/movil2-comprimido.jpg");
+    height: 15rem;
+}
+.grid__card3{
+    background-image: url("../img/movil1-comprimido.jpg");
+    height: 20rem;
+}
+
+@media (min-width:800px){
+    .menu{
+        padding: 4rem 4rem;
+
+    }
+    .grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "card1 card1"
+        "card2 card3"
+        ;
+        gap: 3rem;
+
+        .grid__card1{
+            grid-area: card1;
+            background-image: url("../img/-comprimido.jpg");
+            height: 400px;
+            padding: 4rem;
+        }
+         .grid__card2{
+            grid-area: card2;
+            background-image: url("../img/menu2-comprimido.jpg");
+            height: 20rem;
+            padding: 2rem;
+        }
+         .grid__card3{
+            grid-area: card3;
+            background-image: url("../img/menu3-comprimida.jpg");
+            padding: 2rem;
+        }
+        .grid__card h5{
+            font-size: 3rem;
+            color: $primer-color;
+        }
+        .grid__card h4{
+            font-size: 2rem;
+        }
+        .btn{
+            background: linear-gradient(-45deg,#fc5406,#4f362b,#010103);
+        }
+    }
+}
