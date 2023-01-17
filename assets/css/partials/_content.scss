@@ -1,24 +1,28 @@
 @use '_commons' as c;
 /*---contenido*/
 
-html{
-    &::-webkit-scrollbar{
-        width:.8rem;
-    }
-    &::-webkit-scrollbar-track{
-        background:transparent;
-    }
-    &::-webkit-scrollbar-thumb{
-        background: map-get(c.$colores, segundocolor);
-        border-radius:5rem;
-    }
+html::-webkit-scrollbar{
+    width: .8rem;
 }
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+html::-webkit-scrollbar-thumb{
+    background: #d3ad7f;
+    border-radius: 5rem;
+}
+html, body{
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
+
 body {
     font-family: "Prompt", sans-serif;
     outline: none;
     text-decoration: none;
     line-height: 1.5;
     background-color: map-get(c.$colores, fondo);
+    
 } 
 span{
     color:map-get(c.$colores, span1);

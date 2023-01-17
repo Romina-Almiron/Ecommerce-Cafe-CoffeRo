@@ -17,6 +17,11 @@ html::-webkit-scrollbar-thumb{
     border-radius: 5rem;
 }
 
+html, body{
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
+
 body{
     font-family:'Prompt', sans-serif; 
     outline: none;

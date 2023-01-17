@@ -106,12 +106,19 @@
 html::-webkit-scrollbar {
   width: 0.8rem;
 }
+
 html::-webkit-scrollbar-track {
   background: transparent;
 }
+
 html::-webkit-scrollbar-thumb {
   background: #d3ad7f;
   border-radius: 5rem;
+}
+
+html, body {
+  max-width: 100% !important;
+  overflow-x: hidden !important;
 }
 
 body {
@@ -214,10 +221,10 @@ section {
 
 /*---------nosotros-----*/
 main {
-  padding: 3rem 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  padding: 3rem 1.5rem;
 }
 main .abaut {
   display: flex;
