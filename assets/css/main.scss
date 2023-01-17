@@ -1,8 +1,7 @@
-@import"./partials/commons";
-@import"./partials/navbar";
-@import"./partials/content";
-@import"./partials/nosotros";
-@import"./partials/menu";
-@import"./partials/productos";
-@import"./partials/contacto";
-@import"./partials/footer";
+@use "./partials/navbar";
+@use "./partials/content";
+@use "./partials/nosotros";
+@use "./partials/menu";
+@use "./partials/productos";
+@use "./partials/contacto";
+@use "./partials/footer";

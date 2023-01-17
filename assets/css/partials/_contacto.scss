@@ -1,3 +1,4 @@
+@use '_commons' as c;
 /*-------CONTACTO------*/
 .contenedor{
     max-width: 1170px;
@@ -31,14 +32,18 @@
                     grid-column: 1 / 3;
                 }
             }
+            .btn{
+                @extend %boton;
+                border:1px solid #d3ad7f;
+            }
         }
         .contact-form form input,
         .contact-form form textarea {
             @extend %formulario;
         }
         .contact-info {
-            background: linear-gradient(-45deg,#fc5406,#4f362b,#010103);
-            color: #fff;
+            background: map-get(c.$colores, tercercolor);
+            color: map-get(c.$colores, infocolor);
 
             ul {
                 list-style: none;

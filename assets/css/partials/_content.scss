@@ -1,3 +1,4 @@
+@use '_commons' as c;
 /*---contenido*/
 
 html{
@@ -8,7 +9,7 @@ html{
         background:transparent;
     }
     &::-webkit-scrollbar-thumb{
-        background:$segundo-color;
+        background: map-get(c.$colores, segundocolor);
         border-radius:5rem;
     }
 }
@@ -17,14 +18,14 @@ body {
     outline: none;
     text-decoration: none;
     line-height: 1.5;
-    background-color: $fondo;
+    background-color: map-get(c.$colores, fondo);
 } 
 span{
-    color: $segundo-color;
+    color:map-get(c.$colores, span1);
     font-weight: 600;
 
     @media (min-width:800px){
-        color: $primer-color;
+        color: map-get(c.$colores, span2);
     }
 }
 /*--titulos principales de: nosotros,menu,producto,contacto--*/
@@ -32,7 +33,7 @@ span{
 .menu .titulo h1,
 .producto__titulo h1,
 .contenedor__titulo h1{
-    color: $primer-color;
+    color: map-get(c.$colores, primercolor);
     font-size: 2rem;
     text-align: center;
     text-transform: uppercase;
@@ -42,7 +43,7 @@ span{
 
         font-size:3rem;
         padding-bottom: 2rem;
-        color: $segundo-color;
+        color: map-get(c.$colores, segundocolor); 
 
     }
 
@@ -64,7 +65,7 @@ section{
         flex-direction: column;
 
         h1{
-            color:$primer-color;
+            color:map-get(c.$colores, tituloinicio);
             font-size: 2rem;
             text-transform: uppercase;
         }
@@ -72,15 +73,15 @@ section{
             padding:.2rem 1rem;
             font-size: 1rem;
             font-weight: 600;
-            color: $btn-color1;
+            color: map-get(c.$colores, btncolor1);
             cursor: pointer;
-            border: 3px solid $borde2;
+            border: 3px solid map-get(c.$colores, borde2);
             margin-top: 1rem;
             width: 120px;
 
             &:hover{
-                background: $btn-fondo1;
-                color: $btn-color2;
+                background:map-get(c.$colores, btnfondo ); 
+                color: map-get(c.$colores, btn-color2);
             }
 
         }   
@@ -102,14 +103,14 @@ section{
               color: #d3ad7f;
             }
             .btn{
-                background: $btn-fondo2;
+                background: map-get(c.$colores, btnfondo2);
                 font-size: 1.5rem;
                 width: 25%;
 
                 &:hover{
-                    background:$btn-fondo3;
-                    color: $btn-color2;
-                    border: 3px solid $borde2;
+                    background:map-get(c.$colores, btnfondo3);
+                    color: map-get(c.$colores, btncolor2);
+                    border: 3px solid map-get(c.$colores, borde2);
                 }
             }
         }

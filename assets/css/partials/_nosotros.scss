@@ -1,3 +1,4 @@
+@use '_commons' as c;
 /*---------nosotros-----*/
 main{
     padding: 3rem 1.5rem;
@@ -16,23 +17,23 @@ main{
             flex-direction: column;
             padding: 2rem;
             background:transparent;
-            border: 1px solid $borde3;
+            border: 1px solid map-get(c.$colores, borde3);
             border-radius: 5px;
             gap: 1rem;
 
             h2{
                 font-size: 1.2rem;
-                color: #d3ad7f;
+                color: map-get(c.$colores, nosotrosh2);
                 font-weight: 300;
             }
             p{
-                color: #fff;
+                color: map-get(c.$colores, nosotrosp);
                 font-size: .85rem;
                 line-height: 1.8rem;
             }
             .btn{
-                border: 1px solid $borde2;
-                color: $primer-color;
+                @extend %boton;
+                border:1px solid #d3ad7f;
             }
         }
     }
@@ -54,14 +55,14 @@ main{
             .abaut__info{
                 grid-column: 5/9;
                 grid-row: 2/3;
-                background-color: $fondo;
+                background-color: map-get(c.$colores, fondo);
                 padding: 4rem;
                 text-align: center;
                 border-radius: 1px;
 
                 &:hover{
                     cursor: pointer;
-                    background: $tercer-color;
+                    background: map-get(c.$colores, tercercolor);
                 }
                 h2{
                     font-size: 2.3rem;
@@ -70,10 +71,7 @@ main{
                 p{
                     font-style: 1rem;
                 }
-                .btn{
-                    border:none;
-                    border: 1px solid $btn-fondo1;
-                }
+                
             } 
         }
     }

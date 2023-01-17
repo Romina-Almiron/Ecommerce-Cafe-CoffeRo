@@ -30,11 +30,10 @@
   text-decoration: none;
 }
 .footer .lista .lista__link a:hover {
-  color: #d3ad7f;
   border-bottom: 1px solid rgb(255, 255, 0);
 }
 
-.producto .caja .tarjeta .tarjetas .btn, .grid > div .btn {
+.contenedor .contact-wrapper .contact-form .btn, .producto .caja .tarjeta .tarjetas .btn, .btn, main .abaut .abaut__info .btn {
   border: 3px solid #010103;
   padding: 0.2rem 1rem;
   font-size: 1rem;
@@ -44,7 +43,7 @@
   margin-top: 1rem;
   width: 120px;
 }
-.producto .caja .tarjeta .tarjetas .btn:hover, .grid > div .btn:hover {
+.contenedor .contact-wrapper .contact-form .btn:hover, .producto .caja .tarjeta .tarjetas .btn:hover, .btn:hover, main .abaut .abaut__info .btn:hover {
   background: #d3ad7f;
   color: #010103;
 }
@@ -187,10 +186,6 @@ section {
   margin-top: 1rem;
   width: 120px;
 }
-.inicio .content .btn:hover {
-  background: #d3ad7f;
-  color: #010103;
-}
 @media (min-width: 800px) {
   .inicio {
     background-image: url("../img/inicio-comprimida.jpg");
@@ -251,7 +246,6 @@ main .abaut .abaut__info p {
 }
 main .abaut .abaut__info .btn {
   border: 1px solid #d3ad7f;
-  color: #fff;
 }
 
 @media (min-width: 800px) {
@@ -287,10 +281,6 @@ main .abaut .abaut__info .btn {
   main .abaut .abaut__info p {
     font-style: 1rem;
   }
-  main .abaut .abaut__info .btn {
-    border: none;
-    border: 1px solid #d3ad7f;
-  }
 }
 /*-------MENU-------*/
 .menu {
@@ -302,33 +292,21 @@ main .abaut .abaut__info .btn {
 .grid {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .grid > div {
   background-size: cover;
   padding: 1, 5rem;
+}
+
+.grid__card {
   background-position: center;
   padding: 1rem;
   border-radius: 1rem;
-  border: 3px solid #d3ad7f;
+  border: 3px solid;
 }
-.grid > div h5 {
-  font-size: 1.9rem;
-  color: #d3ad7f;
-  font-weight: 600;
-}
-.grid > div h4 {
-  font-size: 1.5rem;
-  color: #010103;
-  font-weight: 600;
-}
-.grid > div .grid__precio {
-  color: #fff;
-  font-size: 30px;
-  width: 0;
-  font-weight: 600;
-}
+
 .grid__card1 {
   background-image: url("../img/movil3-comprimido.jpg");
   height: 20rem;
@@ -342,6 +320,25 @@ main .abaut .abaut__info .btn {
 .grid__card3 {
   background-image: url("../img/movil1-comprimido.jpg");
   height: 20rem;
+}
+
+.grid__card h5 {
+  font-size: 1.9rem;
+  color: #d3ad7f;
+  font-weight: 600;
+}
+
+.grid__card h4 {
+  font-size: 1.5rem;
+  color: #010103;
+  font-weight: 600;
+}
+
+.grid__precio {
+  color: #fff;
+  font-size: 30px;
+  width: 0;
+  font-weight: 600;
 }
 
 @media (min-width: 800px) {
@@ -486,6 +483,9 @@ main .abaut .abaut__info .btn {
 .contenedor .contact-wrapper .contact-form .form .block {
   grid-column: 1/3;
 }
+.contenedor .contact-wrapper .contact-form .btn {
+  border: 1px solid #d3ad7f;
+}
 .contenedor .contact-wrapper .contact-info {
   background: linear-gradient(-45deg, #fc5406, #4f362b, #010103);
   color: #fff;
@@ -520,7 +520,6 @@ main .abaut .abaut__info .btn {
 
 /*----Footer------*/
 .footer {
-  background: #010103;
   border-top: 1px solid #d3ad7f;
   padding: 25px 0;
   overflow: hidden;

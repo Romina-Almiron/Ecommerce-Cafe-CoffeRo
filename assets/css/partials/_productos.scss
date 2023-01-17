@@ -1,3 +1,4 @@
+@use '_commons' as c;
 /*--------productos----*/
 @mixin flex($direction, $gap){
     display: flex;
@@ -15,7 +16,7 @@
             text-align: center;
             
             img{
-                @extend %producto;
+                @extend %producto1;
             }
 
             .tarjetas{
@@ -41,7 +42,7 @@
                 }
                 .btn{
                     @extend %boton;
-                    border:1px solid #d3ad7f;
+                    border:1px solid map-get(c.$colores, borde2);
                 }
 
             }
@@ -63,7 +64,7 @@
                 img{
                     height: 15rem;
                     transition: 1s;
-    
+                
                     &:hover{
                         transform: scale(1.1) translateY(-25px);
                         box-shadow: rgba(251, 253, 254, 0.861) 0px 10px 50px;
@@ -80,7 +81,7 @@
                 font-size: 2.5rem;
             }
             span{
-                color: #d3ad7f;
+                color: map-get(c.$colores, span1);
                 text-decoration: line-through;
                 font-weight: lighter;
                 font-size: 1.5rem;

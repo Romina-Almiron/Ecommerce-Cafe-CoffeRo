@@ -1,7 +1,8 @@
+@use '_commons' as c;
 /*----Footer------*/
 .footer{
-    background: $fondo;
-    border-top: 1px solid $borde2;
+    background: map-get(c.$colores, fond);
+    border-top: 1px solid map-get(c.$colores, borde2);
     padding: 25px 0;
     overflow: hidden;
 
@@ -35,6 +36,6 @@
         margin-top: 15px;
         text-align: center;
         font-size: 13px;
-        color:$segundo-color ;
+        color:map-get(c.$colores, footercopy);
     }
 } 
