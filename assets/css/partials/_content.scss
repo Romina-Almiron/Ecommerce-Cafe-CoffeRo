@@ -127,14 +127,13 @@ section{
               color: #d3ad7f;
             }
             .btn{
-                padding:1rem 1rem;
                 background: map-get(c.$colores, btnfondo4);
                 text-transform: uppercase;
                 color: map-get(c.$colores, btncolor1);
-                font-size: 18px;
+                font-size: 1.5rem;
                 border: 2px solid map-get(c.$colores, borde3);
                 border-radius: 5rem;
-                width: 130px;
+                width: 20%;
 
                 &:hover{
                     background:map-get(c.$colores, btnfondo3);

@@ -78,13 +78,13 @@ $colores:(
 %boton{
     position: relative;
     border: 3px solid map-get($colores, borde4);
-    padding:.2rem 1rem;
+    padding: .2rem 1rem;
     font-size: 1rem;
     text-transform: uppercase;
     text-decoration: none;
     font-weight: 600;
-    color: map-get($colores, btncolor1);
-    background:map-get($colores, btnfondo2); 
+    color: map-get($colores, btncolor1 );
+    background: map-get($colores, btnfondo2);
     cursor: pointer;
     margin-top: 1rem;
     width: 120px;
@@ -92,8 +92,8 @@ $colores:(
     border-radius: 3rem;
 
     &:hover{
-        background:map-get($colores, btnfondo3 );
-        color:map-get($colores, btncolor2 ); 
+        background: map-get($colores, btnfondo3);
+        color: map-get($colores, btncolor2);
     }
 }
 //boton nosotros//

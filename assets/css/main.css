@@ -301,14 +301,13 @@ section {
     color: #d3ad7f;
   }
   .inicio .content .btn {
-    padding: 1rem 1rem;
     background: #d99a07;
     text-transform: uppercase;
     color: #fff;
-    font-size: 18px;
+    font-size: 1.5rem;
     border: 2px solid #fff;
     border-radius: 5rem;
-    width: 130px;
+    width: 20%;
   }
   .inicio .content .btn:hover {
     background: #fff;
