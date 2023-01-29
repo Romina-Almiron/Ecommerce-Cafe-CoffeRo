@@ -80,26 +80,8 @@ section{
             text-transform: uppercase;
         }
         .btn{
-            padding:.2rem 1rem;
-            font-size: 1rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            color: map-get(c.$colores, btncolor1);
-            cursor: pointer;
-            background: map-get(c.$colores, btnfondo4);
-            border: 3px solid map-get(c.$colores, borde3);
-            border-radius: 5rem;
-            margin-top: 1rem;
-            width: 120px;
-
-            &:hover{
-                background:map-get(c.$colores, btnfondo3 ); 
-                color: map-get(c.$colores, btncolor2);
-                border: 2px solid map-get(c.$colores, borde4);
-            }
-
-        }   
-           
+            @extend %inicio;
+        }      
     }
 
     @media (min-width:800px){
@@ -127,19 +109,8 @@ section{
               color: #d3ad7f;
             }
             .btn{
-                background: map-get(c.$colores, btnfondo4);
-                text-transform: uppercase;
-                color: map-get(c.$colores, btncolor1);
-                font-size: 1.5rem;
-                border: 2px solid map-get(c.$colores, borde3);
-                border-radius: 5rem;
-                width: 20%;
-
-                &:hover{
-                    background:map-get(c.$colores, btnfondo3);
-                    color: map-get(c.$colores, btncolor2);
-                    border: 2px solid map-get(c.$colores, borde4);
-                }
+                font-size: 20px;
+                width: 155px;
             }
         }
         

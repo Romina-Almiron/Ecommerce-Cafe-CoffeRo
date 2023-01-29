@@ -33,6 +33,26 @@
   border-bottom: 1px solid rgb(255, 255, 0);
 }
 
+.inicio .content .btn {
+  padding: 0.2rem 1rem;
+  font-size: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 600;
+  background: #d99a07;
+  text-decoration: none;
+  cursor: pointer;
+  width: 130px;
+  border: 3px solid #fff;
+  border-radius: 3rem;
+}
+.inicio .content .btn:hover {
+  background: #fff;
+  color: #010103;
+  border: 3px solid #d99a07;
+}
+
 .btn_grid {
   position: relative;
   border: 3px solid #010103;
@@ -258,24 +278,6 @@ section {
   font-size: 2rem;
   text-transform: uppercase;
 }
-.inicio .content .btn {
-  padding: 0.2rem 1rem;
-  font-size: 1rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  color: #fff;
-  cursor: pointer;
-  background: #d99a07;
-  border: 3px solid #fff;
-  border-radius: 5rem;
-  margin-top: 1rem;
-  width: 120px;
-}
-.inicio .content .btn:hover {
-  background: #fff;
-  color: #010103;
-  border: 2px solid #010103;
-}
 @media (min-width: 800px) {
   .inicio {
     position: relative;
@@ -301,18 +303,8 @@ section {
     color: #d3ad7f;
   }
   .inicio .content .btn {
-    background: #d99a07;
-    text-transform: uppercase;
-    color: #fff;
-    font-size: 1.5rem;
-    border: 2px solid #fff;
-    border-radius: 5rem;
-    width: 20%;
-  }
-  .inicio .content .btn:hover {
-    background: #fff;
-    color: #010103;
-    border: 2px solid #010103;
+    font-size: 20px;
+    width: 155px;
   }
 }
 

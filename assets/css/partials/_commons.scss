@@ -74,6 +74,28 @@ $colores:(
             border-bottom:1px solid map-get($colores, borde1);
         }
 }
+//boton inicio//
+%inicio{
+    padding:.2rem 1rem;
+    font-size: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: map-get($colores, btncolor1);
+    font-weight: 600;
+    background: map-get($colores, btnfondo4);
+    text-decoration: none;
+    cursor: pointer;
+    width: 130px;
+    border: 3px solid map-get($colores, borde3);
+    border-radius: 3rem;
+
+    &:hover{
+        background:map-get($colores, btnfondo3 ); 
+        color: map-get($colores, btncolor2);
+        border: 3px solid map-get($colores, borde6);
+    }
+
+}
 //boton menu//
 %boton{
     position: relative;
