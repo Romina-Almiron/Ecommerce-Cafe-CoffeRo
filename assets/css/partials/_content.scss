@@ -15,14 +15,12 @@ html, body{
     max-width: 100% !important;
     overflow-x: hidden !important;
 }
-
 body {
     font-family: "Prompt", sans-serif;
     outline: none;
     text-decoration: none;
     line-height: 1.5;
-    background-color: map-get(c.$colores, fondo);
-    
+    background-color: map-get(c.$colores, fondo);    
 } 
 span{
     color:map-get(c.$colores, span1);
@@ -48,15 +46,14 @@ span{
         font-size:3rem;
         padding-bottom: 2rem;
         color: map-get(c.$colores, segundocolor); 
-
     }
-
 }
 /*-----INICIO---*/
 section{
     padding: 2rem 5%;
 }
 .inicio{
+    position: relative;
     background-image: url("../img/-comprimida.jpg");
     background-size: cover;
     min-height: 90vh;
@@ -64,6 +61,15 @@ section{
     align-items: center;
     padding: 4rem 2rem;
 
+    &::before{
+        position: absolute;
+        content: "";
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, .4);
+    }
     .content{
         display: flex;
         flex-direction: column;
@@ -77,15 +83,19 @@ section{
             padding:.2rem 1rem;
             font-size: 1rem;
             font-weight: 600;
+            text-transform: uppercase;
             color: map-get(c.$colores, btncolor1);
             cursor: pointer;
-            border: 3px solid map-get(c.$colores, borde2);
+            background: map-get(c.$colores, btnfondo4);
+            border: 3px solid map-get(c.$colores, borde3);
+            border-radius: 5rem;
             margin-top: 1rem;
             width: 120px;
 
             &:hover{
-                background:map-get(c.$colores, btnfondo ); 
-                color: map-get(c.$colores, btn-color2);
+                background:map-get(c.$colores, btnfondo3 ); 
+                color: map-get(c.$colores, btncolor2);
+                border: 2px solid map-get(c.$colores, borde4);
             }
 
         }   
@@ -94,11 +104,21 @@ section{
 
     @media (min-width:800px){
         
+        position: relative;
         background-image: url("../img/inicio-comprimida.jpg");
         padding: 6rem 2rem;
         min-height: 100vh;
         background-position: center;
 
+        &::before{
+            position: absolute;
+            content: "";
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, .4);
+        }
         .content{
             max-width:50rem ;
 
@@ -107,14 +127,19 @@ section{
               color: #d3ad7f;
             }
             .btn{
-                background: map-get(c.$colores, btnfondo2);
-                font-size: 1.5rem;
-                width: 25%;
+                padding:1rem 1rem;
+                background: map-get(c.$colores, btnfondo4);
+                text-transform: uppercase;
+                color: map-get(c.$colores, btncolor1);
+                font-size: 18px;
+                border: 2px solid map-get(c.$colores, borde3);
+                border-radius: 5rem;
+                width: 130px;
 
                 &:hover{
                     background:map-get(c.$colores, btnfondo3);
                     color: map-get(c.$colores, btncolor2);
-                    border: 3px solid map-get(c.$colores, borde2);
+                    border: 2px solid map-get(c.$colores, borde4);
                 }
             }
         }

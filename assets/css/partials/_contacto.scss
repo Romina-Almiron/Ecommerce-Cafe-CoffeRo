@@ -12,19 +12,18 @@
          > * {
             padding: 1em;
         }
-
         .contact-form {
             background: transparent;
             color: #fff;
 
-            .form{
+            form{
                 display: grid;
                 grid-template-columns: 1fr 1fr;
 
                 label{
                     display: block;
                 }
-                p{
+                div{
                     margin: 0;
                     padding: 1em;
                 }
@@ -32,9 +31,8 @@
                     grid-column: 1 / 3;
                 }
             }
-            .btn{
-                @extend %boton;
-                border:1px solid #d3ad7f;
+            .btn_block{
+                @extend %contacto;
             }
         }
         .contact-form form input,
@@ -60,20 +58,28 @@
         .contact-wrapper {
             display: grid;
             grid-template-columns: 2fr 1fr;
-        }
-        .contact-wrapper > * {
-            padding: 2em;
-        }
-        .contact-form {
-            font-size: 1.3rem;
-        }
-        .contact-info h4,
-        .contact-info ul,
-        .contact-info p {
-            text-align: center;
-            font-size: 1.2rem;
-            padding: 2rem;
-        }
+
+             >*{
+                padding: 2em;
+             }
+            .contact-form {
+                font-size: 1.3rem;
+
+                .btn_block{
+                    font-size: 20px;
+                    margin-left: 40%;
+                    margin-top: 10%;
+                }
+             
+            }
+            .contact-info h4,
+            .contact-info ul,
+            .contact-info p {
+                text-align: center;
+                font-size: 1rem;
+                padding: 2rem;
+            }        
+        } 
     }
 }
                 

@@ -1,90 +1,91 @@
 @use '_commons' as c;
 /*--------productos----*/
-@mixin flex($direction, $gap){
+
+.caja{
     display: flex;
-    flex-direction: $direction;
-    gap: $gap;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
 }
-.producto{
-    @include flex(column, 5rem);
+.tarjeta{
+    display: flex;
+    width: 45%;
+    height: 10%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 9px;
+    border:solid map-get(c.$colores , borde6 );
+    background: map-get(c.$colores, fondo);
+    padding-top: 50px;
+    padding-bottom: 40px;
+    flex: 1;
+}
+.tarjeta__imagen{
+    @extend %producto;
+}
+.tarjetas{
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+    width: 85%;
+    margin-top: 20px;
 
-    .caja{
-        @include flex(column, 1.5rem);
-
-        .tarjeta{
-            flex: 1;
-            text-align: center;
-            
-            img{
-                @extend %producto1;
-            }
-
-            .tarjetas{
-                padding: 2rem;
-
-                h4{
-                    color: #d3ad7f;
-                    font-size: 1rem;
-                }
-                p{
-                    font-size: 1rem;
-                    color: #fff;
-                }
-                .tarjeta__precio{
-                    color: #fff;
-                    font-size: 2rem;
-
-                    span{
-                        text-decoration: line-through;
-                        font-weight: lighter;
-                        font-size: 1.2rem;
-                    }
-                }
-                .btn{
-                    @extend %boton;
-                    border:1px solid map-get(c.$colores, borde2);
-                }
-
-            }
-
+    h4{
+      color: map-get(c.$colores , segundocolor );
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    p{
+        font-size: 0.75rem;
+        color: map-get(c.$colores, primercolor );
+    }
+    .tarjeta__precio{
+        color: map-get(c.$colores, primercolor );
+        font-size: 1.8rem;
+        
+        span{
+            color: map-get(c.$colores, cuartocolor );
+            text-decoration: line-through;
+            font-weight: lighter;
+            font-size: 1rem;
         }
     }
-
-    @media (min-width:800px){
-
-        .caja{
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-            gap:2rem;
-            
+    .btn_tarjetas{
+        @extend %btnproducto;
+    }
     
-            .imagen{
-                padding: 2rem 0;
     
-                img{
-                    height: 15rem;
-                    transition: 1s;
-                
-                    &:hover{
-                        transform: scale(1.1) translateY(-25px);
-                        box-shadow: rgba(251, 253, 254, 0.861) 0px 10px 50px;
-                    }
-                }
+}
+
+@media (min-width:800px){
+     
+    .caja{
+        flex-wrap: nowrap;
+        margin-left: auto;
+        margin-right: auto;
+
+        .tarjeta{
+            width: 25%;
+
+            img{
+                width: 75%;
             }
-            .tarjetas h4{
-                font-size: 2rem;
+            h4{
+                font-size: 1.8rem;
             }
-            .tarjetas p{
-                font-size: .0.7rem;
-            }
-            .tarjeta__precio{
-                font-size: 2.5rem;
+            p{
+                font-size: 1.3rem;
             }
             span{
-                color: map-get(c.$colores, span1);
-                text-decoration: line-through;
-                font-weight: lighter;
-                font-size: 1.5rem;
+                font-size: 1.2rem;
+            }
+            .btn_tarjetas{
+                width: 100%;
+                font-size: 1rem;
             }
         }
     }

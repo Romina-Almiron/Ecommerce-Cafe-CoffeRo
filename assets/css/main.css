@@ -33,26 +33,73 @@
   border-bottom: 1px solid rgb(255, 255, 0);
 }
 
-.contenedor .contact-wrapper .contact-form .btn, .producto .caja .tarjeta .tarjetas .btn, .btn, main .abaut .abaut__info .btn {
+.btn_grid {
+  position: relative;
   border: 3px solid #010103;
   padding: 0.2rem 1rem;
   font-size: 1rem;
+  text-transform: uppercase;
+  text-decoration: none;
   font-weight: 600;
   color: #fff;
+  background: #010103;
   cursor: pointer;
   margin-top: 1rem;
   width: 120px;
+  border: 3px solid #fc5406;
+  border-radius: 3rem;
 }
-.contenedor .contact-wrapper .contact-form .btn:hover, .producto .caja .tarjeta .tarjetas .btn:hover, .btn:hover, main .abaut .abaut__info .btn:hover {
-  background: #d3ad7f;
+.btn_grid:hover {
+  background: #fff;
   color: #010103;
 }
 
-.producto .caja .tarjeta img {
-  height: 13rem;
-  transition: 1s;
+main .abaut .btn_info {
+  padding: 0.2rem 1rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 600;
+  background: #d99a07;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  width: 130px;
+  border: 3px solid #fff;
+  border-radius: 3rem;
 }
-.producto .caja .tarjeta img:hover {
+main .abaut .btn_info:hover {
+  color: #d99a07;
+  background: #010103;
+}
+
+.contenedor .contact-wrapper .contact-form .btn_block {
+  padding: 0.2rem 1rem;
+  margin-left: 25%;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #d99a07;
+  font-weight: 600;
+  background: #010103;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  width: 130px;
+  border: 3px solid #fff;
+  border-radius: 3rem;
+}
+.contenedor .contact-wrapper .contact-form .btn_block:hover {
+  background: #fff;
+  color: #010103;
+  border: 3px solid #d99a07;
+}
+
+.tarjeta__imagen {
+  width: 55%;
+  transition: 1s;
+  opacity: 0.8;
+}
+.tarjeta__imagen:hover {
   transform: scale(1.1) translateY(-25px);
   box-shadow: rgba(251, 253, 254, 0.861) 0px 10px 50px;
 }
@@ -66,6 +113,24 @@
   background: none;
   outline: 0;
   border-bottom: 1px solid #d3ad7f;
+}
+
+.tarjetas .btn_tarjetas {
+  background: #010103;
+  color: #d99a07;
+  border: 3px solid #fff;
+  padding: 0.2rem 1rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  width: 120px;
+  border-radius: 3rem;
+  margin-top: 15px;
+}
+.tarjetas .btn_tarjetas:hover {
+  color: #fff;
+  background: #d99a07;
 }
 
 /*-------------Barra de navegación-------*/
@@ -87,11 +152,11 @@
   padding-bottom: 1px;
 }
 
-#navbarNav {
+.iconos {
   color: #fff;
   cursor: pointer;
 }
-#navbarNav:hover {
+.iconos :hover {
   color: #d3ad7f;
   overflow: hidden;
   transition: 0.1s;
@@ -167,12 +232,22 @@ section {
 }
 
 .inicio {
+  position: relative;
   background-image: url("../img/-comprimida.jpg");
   background-size: cover;
   min-height: 90vh;
   display: flex;
   align-items: center;
   padding: 4rem 2rem;
+}
+.inicio::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 .inicio .content {
   display: flex;
@@ -187,18 +262,36 @@ section {
   padding: 0.2rem 1rem;
   font-size: 1rem;
   font-weight: 600;
+  text-transform: uppercase;
   color: #fff;
   cursor: pointer;
-  border: 3px solid #d3ad7f;
+  background: #d99a07;
+  border: 3px solid #fff;
+  border-radius: 5rem;
   margin-top: 1rem;
   width: 120px;
 }
+.inicio .content .btn:hover {
+  background: #fff;
+  color: #010103;
+  border: 2px solid #010103;
+}
 @media (min-width: 800px) {
   .inicio {
+    position: relative;
     background-image: url("../img/inicio-comprimida.jpg");
     padding: 6rem 2rem;
     min-height: 100vh;
     background-position: center;
+  }
+  .inicio::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
   }
   .inicio .content {
     max-width: 50rem;
@@ -208,14 +301,19 @@ section {
     color: #d3ad7f;
   }
   .inicio .content .btn {
-    background: #010103;
-    font-size: 1.5rem;
-    width: 25%;
+    padding: 1rem 1rem;
+    background: #d99a07;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 18px;
+    border: 2px solid #fff;
+    border-radius: 5rem;
+    width: 130px;
   }
   .inicio .content .btn:hover {
     background: #fff;
     color: #010103;
-    border: 3px solid #d3ad7f;
+    border: 2px solid #010103;
   }
 }
 
@@ -231,30 +329,30 @@ main .abaut {
   flex-direction: column;
   gap: 2rem;
 }
+main .abaut img {
+  opacity: 0.6;
+}
 main .abaut .abaut__info {
   text-align: center;
   display: flex;
   flex-direction: column;
-  padding: 2rem;
+  align-items: center;
+  padding: 1.5rem;
   background: transparent;
   border: 1px solid #fff;
   border-radius: 5px;
   gap: 1rem;
 }
-main .abaut .abaut__info h2 {
+main .abaut h2 {
   font-size: 1.2rem;
   color: #d3ad7f;
   font-weight: 300;
 }
-main .abaut .abaut__info p {
+main .abaut p {
   color: #fff;
-  font-size: 0.85rem;
-  line-height: 1.8rem;
+  font-size: 0.82rem;
+  line-height: 1.5rem;
 }
-main .abaut .abaut__info .btn {
-  border: 1px solid #d3ad7f;
-}
-
 @media (min-width: 800px) {
   main {
     padding: 4rem 4rem;
@@ -264,29 +362,42 @@ main .abaut .abaut__info .btn {
     grid-template-columns: repeat(8, 1fr);
   }
   main .abaut img {
-    max-width: 100%;
+    max-width: 80%;
     grid-column: 1/6;
     grid-row: 1/3;
     border-radius: 5px;
+    opacity: 0.6;
   }
   main .abaut .abaut__info {
-    grid-column: 5/9;
+    grid-column: 4/9;
     grid-row: 2/3;
-    background-color: #010103;
-    padding: 4rem;
+    background: linear-gradient(-45deg, #fc5406, #4f362b, #010103);
+    padding: 2rem;
     text-align: center;
     border-radius: 1px;
   }
   main .abaut .abaut__info:hover {
     cursor: pointer;
-    background: linear-gradient(-45deg, #fc5406, #4f362b, #010103);
-  }
-  main .abaut .abaut__info h2 {
-    font-size: 2.3rem;
-    text-align: center;
+    background: #010103;
   }
   main .abaut .abaut__info p {
-    font-style: 1rem;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  main .abaut .abaut__info h2 {
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 600;
+  }
+  main .abaut .abaut__info .btn_info {
+    font-size: 20px;
+    width: 155px;
+    color: #d99a07;
+    background: #010103;
+  }
+  main .abaut .abaut__info .btn_info:hover {
+    color: #fff;
+    background: #d99a07;
   }
 }
 /*-------MENU-------*/
@@ -309,35 +420,67 @@ main .abaut .abaut__info .btn {
 
 .grid__card {
   background-position: center;
-  padding: 1rem;
-  border-radius: 1rem;
-  border: 3px solid;
+  padding: 1.5rem;
+  border: 3px solid #d3ad7f;
 }
 
 .grid__card1 {
+  position: relative;
   background-image: url("../img/movil3-comprimido.jpg");
-  height: 20rem;
+  height: 15rem;
+}
+
+.grid__card1::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .grid__card2 {
+  position: relative;
   background-image: url("../img/movil2-comprimido.jpg");
   height: 15rem;
 }
 
+.grid__card2::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 .grid__card3 {
+  position: relative;
   background-image: url("../img/movil1-comprimido.jpg");
-  height: 20rem;
+  height: 15rem;
+}
+
+.grid__card3::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .grid__card h5 {
-  font-size: 1.9rem;
-  color: #d3ad7f;
+  font-size: 1.5rem;
+  color: #d99a07;
   font-weight: 600;
 }
 
 .grid__card h4 {
-  font-size: 1.5rem;
-  color: #010103;
+  font-size: 1.2rem;
+  color: #fc5406;
   font-weight: 600;
 }
 
@@ -346,6 +489,7 @@ main .abaut .abaut__info .btn {
   font-size: 30px;
   width: 0;
   font-weight: 600;
+  margin-bottom: 1rem;
 }
 
 @media (min-width: 800px) {
@@ -374,91 +518,101 @@ main .abaut .abaut__info .btn {
   .grid .grid__card3 {
     grid-area: card3;
     background-image: url("../img/menu3-comprimida.jpg");
+    height: 20rem;
     padding: 2rem;
   }
   .grid .grid__card h5 {
-    font-size: 3rem;
-    color: #fff;
+    font-size: 2.5rem;
+    color: #d99a07;
   }
   .grid .grid__card h4 {
     font-size: 2rem;
+    color: #fff;
   }
-  .grid .btn {
-    background: linear-gradient(-45deg, #fc5406, #4f362b, #010103);
+  .grid .grid__precio {
+    font-size: 45px;
+    text-align: center;
+    color: #fc5406;
   }
 }
 /*--------productos----*/
-.producto {
+.caja {
   display: flex;
-  flex-direction: column;
-  gap: 5rem;
-}
-.producto .caja {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-.producto .caja .tarjeta {
-  flex: 1;
-  text-align: center;
-}
-.producto .caja .tarjeta .tarjetas {
-  padding: 2rem;
-}
-.producto .caja .tarjeta .tarjetas h4 {
-  color: #d3ad7f;
-  font-size: 1rem;
-}
-.producto .caja .tarjeta .tarjetas p {
-  font-size: 1rem;
-  color: #fff;
-}
-.producto .caja .tarjeta .tarjetas .tarjeta__precio {
-  color: #fff;
-  font-size: 2rem;
-}
-.producto .caja .tarjeta .tarjetas .tarjeta__precio span {
-  text-decoration: line-through;
-  font-weight: lighter;
-  font-size: 1.2rem;
-}
-.producto .caja .tarjeta .tarjetas .btn {
-  border: 1px solid #d3ad7f;
-}
-@media (min-width: 800px) {
-  .producto .caja {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    gap: 2rem;
-  }
-  .producto .caja .imagen {
-    padding: 2rem 0;
-  }
-  .producto .caja .imagen img {
-    height: 15rem;
-    transition: 1s;
-  }
-  .producto .caja .imagen img:hover {
-    transform: scale(1.1) translateY(-25px);
-    box-shadow: rgba(251, 253, 254, 0.861) 0px 10px 50px;
-  }
-  .producto .caja .tarjetas h4 {
-    font-size: 2rem;
-  }
-  .producto .caja .tarjetas p {
-    font-size: 0 0.7rem;
-  }
-  .producto .caja .tarjeta__precio {
-    font-size: 2.5rem;
-  }
-  .producto .caja span {
-    color: #d3ad7f;
-    text-decoration: line-through;
-    font-weight: lighter;
-    font-size: 1.5rem;
-  }
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
 }
 
+.tarjeta {
+  display: flex;
+  width: 45%;
+  height: 10%;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 9px;
+  border: solid #d99a07;
+  background: #010103;
+  padding-top: 50px;
+  padding-bottom: 40px;
+  flex: 1;
+}
+
+.tarjetas {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 85%;
+  margin-top: 20px;
+}
+.tarjetas h4 {
+  color: #d3ad7f;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.tarjetas p {
+  font-size: 0.75rem;
+  color: #fff;
+}
+.tarjetas .tarjeta__precio {
+  color: #fff;
+  font-size: 1.8rem;
+}
+.tarjetas .tarjeta__precio span {
+  color: #fc5406;
+  text-decoration: line-through;
+  font-weight: lighter;
+  font-size: 1rem;
+}
+@media (min-width: 800px) {
+  .caja {
+    flex-wrap: nowrap;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .caja .tarjeta {
+    width: 25%;
+  }
+  .caja .tarjeta img {
+    width: 75%;
+  }
+  .caja .tarjeta h4 {
+    font-size: 1.8rem;
+  }
+  .caja .tarjeta p {
+    font-size: 1.3rem;
+  }
+  .caja .tarjeta span {
+    font-size: 1.2rem;
+  }
+  .caja .tarjeta .btn_tarjetas {
+    width: 100%;
+    font-size: 1rem;
+  }
+}
 /*-------CONTACTO------*/
 .contenedor {
   max-width: 1170px;
@@ -476,22 +630,19 @@ main .abaut .abaut__info .btn {
   background: transparent;
   color: #fff;
 }
-.contenedor .contact-wrapper .contact-form .form {
+.contenedor .contact-wrapper .contact-form form {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-.contenedor .contact-wrapper .contact-form .form label {
+.contenedor .contact-wrapper .contact-form form label {
   display: block;
 }
-.contenedor .contact-wrapper .contact-form .form p {
+.contenedor .contact-wrapper .contact-form form div {
   margin: 0;
   padding: 1em;
 }
-.contenedor .contact-wrapper .contact-form .form .block {
+.contenedor .contact-wrapper .contact-form form .block {
   grid-column: 1/3;
-}
-.contenedor .contact-wrapper .contact-form .btn {
-  border: 1px solid #d3ad7f;
 }
 .contenedor .contact-wrapper .contact-info {
   background: linear-gradient(-45deg, #fc5406, #4f362b, #010103);
@@ -513,14 +664,19 @@ main .abaut .abaut__info .btn {
   .contenedor .contact-wrapper > * {
     padding: 2em;
   }
-  .contenedor .contact-form {
+  .contenedor .contact-wrapper .contact-form {
     font-size: 1.3rem;
   }
-  .contenedor .contact-info h4,
-.contenedor .contact-info ul,
-.contenedor .contact-info p {
+  .contenedor .contact-wrapper .contact-form .btn_block {
+    font-size: 20px;
+    margin-left: 40%;
+    margin-top: 10%;
+  }
+  .contenedor .contact-wrapper .contact-info h4,
+.contenedor .contact-wrapper .contact-info ul,
+.contenedor .contact-wrapper .contact-info p {
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding: 2rem;
   }
 }

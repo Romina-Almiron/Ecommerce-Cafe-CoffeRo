@@ -18,11 +18,11 @@
         padding-bottom: 1px;
     } 
 }
-#navbarNav {
+.iconos {
     color:map-get(c.$colores, primercolor);
     cursor: pointer;
 
-    &:hover{
+    :hover{
         color: map-get(c.$colores, segundocolor);
         overflow: hidden;
         transition: .1s;

@@ -18,30 +18,59 @@
 }   
 .grid__card{
     background-position: center;
-    padding: 1rem;
-    border-radius: 1rem;
-    border: 3px solid map-get(c.$colores, borde);
+    padding: 1.5rem;
+    border: 3px solid map-get(c.$colores, borde2);
 }
 .grid__card1{
+    position: relative;
     background-image: url("../img/movil3-comprimido.jpg");
-    height: 20rem;
+    height: 15rem;
+}
+.grid__card1::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .5);
 }
 .grid__card2{
+    position: relative;
     background-image: url("../img/movil2-comprimido.jpg");
     height: 15rem;
 }
+.grid__card2::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .5);
+}
 .grid__card3{
+    position: relative;
     background-image: url("../img/movil1-comprimido.jpg");
-    height: 20rem;
+    height: 15rem;
+}
+.grid__card3::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .5);
 }
 .grid__card h5{
-    font-size: 1.9rem;
+    font-size: 1.5rem;
     color: map-get(c.$colores, menuh5);
     font-weight: 600;
 }
 
 .grid__card h4{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color:map-get(c.$colores, menuh4);
     font-weight: 600;
 }
@@ -50,8 +79,9 @@
     font-size: 30px;
     width: 0;
     font-weight: 600;
+    margin-bottom: 1rem
 }
-.btn{
+.btn_grid{
    @extend %boton;
 }
 
@@ -86,17 +116,21 @@
          .grid__card3{
             grid-area: card3;
             background-image: url("../img/menu3-comprimida.jpg");
+            height: 20rem;
             padding: 2rem;
         }
         .grid__card h5{
-            font-size: 3rem;
-            color: map-get(c.$colores, primercolor);
+            font-size: 2.5rem;
+            color: map-get(c.$colores, menuh5);
         }
         .grid__card h4{
             font-size: 2rem;
+            color: map-get(c.$colores, primercolor);
         }
-        .btn{
-            background: linear-gradient(-45deg,#fc5406,#4f362b,#010103);
+        .grid__precio{
+            font-size: 45px;
+            text-align: center;
+            color: #fc5406;
         }
     }
 }

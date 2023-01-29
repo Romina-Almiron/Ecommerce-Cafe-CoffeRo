@@ -15,9 +15,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="../img/favicon.png">
-    <!-----CSS Inicial
-    <link rel="stylesheet" href="../css/style.css">-->
-    <!-- Main SCSS-->
     <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
@@ -46,23 +43,17 @@
                             <a class="nav-link" href="../pages/contacto.html">Contacto</a>
                         </li>
                     </ul>
-                    <div>
-                        <div class=" collapse navbar-collapse" id="navbarNav">
-                           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" 
-                            class="bi bi-cart3" viewBox="0 0 16 16">
-                            <path
-                            d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
-                          </svg>
-                          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                            class="bi bi-person" viewBox="0 0 16 16">
-                            <path
-                            d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z" />
-                           </svg>
-                        </div>
-                        
-                    </div>
-                    
-                </div>
+                <div>
+                <div class="iconos">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                        class="bi bi-person" viewBox="0 0 16 16">
+                        <path
+                        d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z" />
+                    </svg>
+                </div>                    
             </div>
         </nav>
     </header>
@@ -79,29 +70,29 @@
             <div class="contact-form">
                 
                 <form action="">
-                    <p>
+                    <div>
                         <label>Nombre</label>
                         <input type="text" name="nombre" class="nombre">
-                    </p>
-                    <p>
+                    </div>
+                    <div>
                         <label>Email</label>
                         <input type="email" name="email" class="email">
-                    </p>
-                    <p>
+                    </div>
+                    <div>
                         <label>Teléfono</label>
                         <input type="number" name="teléfono" class="teléfono">
-                    </p>
-                    <p>
+                    </div>
+                    <div>
                         <label>Asunto</label>
                         <input type="text" name="asunto" class="asunto">
-                    </p>
-                    <p class="block">
-                       <label>Mensaje</label> 
+                    </div>
+                    <div class="block">
+                        <label>Mensaje</label> 
                         <textarea name="message" rows="3" class="mensaje"></textarea>
-                    </p>
-                    <p class="block">
-                        <input class="btn"  type="submit" value="Enviar">
-                    </p>
+                    </div>
+                    <div class="block">
+                        <input class="btn_block"  type="submit" value="Enviar">
+                    </div>
                 </form>
             </div>
             <div class="contact-info">
@@ -111,7 +102,11 @@
                     <li><i class="fas fa-phone"></i> (111) 111 111 111</li>
                     <li><i class="fas fa-envelope-open-text"></i> contact@CoffeRo.com</li>
                 </ul>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero provident ipsam necessitatibus repellendus?</p>
+                <p>Si necesitás contactarnos para hacer alguna consulta o simplemente
+                    para dejar tú comentario , por favor sentite libre de hacerlo.
+                    Respondemos en horario laboral(GMT-3)
+                    (Montevideo , Uruguay).
+                </p>
                 <p>CoffeRo.com</p>
             </div>
         </div>
@@ -127,16 +122,16 @@
         </div>
         <ul class="lista">
             <li class="lista__link">
+                <a href="/index.html">Inicio</a>
+            </li>
+            <li class="lista__link">
                 <a href="../pages/nosotros.html">Nosotros</a>
             </li>
             <li class="lista__link">
-                <a href="../pages/contacto.html">Contacto</a>
+                <a href="../pages/menu.html">Menu</a>
             </li>
             <li class="lista__link">
-                <a href="#">Terminos</a>
-            </li>
-            <li class="lista__link">
-                <a href="#">Privacidad</a>
+                <a href="../pages/productos.html">Poductos</a>
             </li>
         </ul>
         <p class="copyright">

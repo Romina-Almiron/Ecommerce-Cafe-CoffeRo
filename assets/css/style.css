@@ -50,24 +50,24 @@ body{
 }
 /*------------ICONOS------------------*/
 
-#navbarNav {
+.iconos {
     color: #fff;
     cursor: pointer;
 }
-#navbarNav :hover{
+.iconos :hover{
     color: #d3ad7f;
    overflow: hidden;
    transition: .1s;
 }
+
 
 /*--------------------INICIO----------------*/
 
 section{
     padding: 2rem 5%;
 }
-
-
 .inicio{
+    position: relative;
     background-image: url("../img/-comprimida.jpg");
     background-size: cover;
     min-height: 90vh;
@@ -75,12 +75,18 @@ section{
     align-items: center;
     padding: 4rem 2rem;
 }
-
-
+.inicio::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .6);
+}
 .inicio .content{
     display: flex;
     flex-direction: column;
-   
 }
 .inicio .content h1{
     color:#fff;
@@ -97,14 +103,18 @@ span{
     font-size: 1rem;
     font-weight: 600;
     color: #fff;
+    background: #d3ad7f;
     cursor: pointer;
-    border: 3px solid #d3ad7f;
+    border: 3px solid #fff;
+    border-radius: 5rem;
     margin-top: 1rem;
     width: 120px;
 }
 .btn:hover{
-    background: #d3ad7f;
+    background: #fff;
     color: #010103;
+    border: 2px solid #fff;
+    border-radius: 3rem;
 }
 
 /*-----------------FOOTER---------------*/
@@ -185,11 +195,15 @@ main{
     flex-direction: column;
     gap: 2rem;
 }
+.abaut > img{
+    opacity: 0.6;
+}
 .abaut__info{
     text-align: center;
     display: flex;
     flex-direction: column;
-    padding: 2rem;
+    align-items: center;
+    padding: 1.5rem;
     background:transparent;
     border: 1px solid #fff;
     border-radius: 5px;
@@ -202,12 +216,28 @@ main{
 }
 .abaut__info p{
     color: #fff;
-    font-size: .85rem;
-    line-height: 1.8rem;
+    font-size: .82rem;
+    line-height: 1.5rem;
 }
-.abaut__info .btn{
-    border: 1px solid #d3ad7f;
+.btn_info{
+    padding:.2rem 1rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 600;
+    background: #d99a07;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    width: 130px;
+    border: 3px solid #fff;
+    border-radius: 3rem;
 }
+.btn_info:hover{
+    color: #d99a07;
+    background: #010103;
+}
+
 
 /*------------------MENU------------*/
 .menu{
@@ -232,30 +262,62 @@ main{
 }
 .grid__card{
     background-position: center;
-    padding: 1rem;
-    border-radius: 1rem;
+    padding: 1.5rem;
     border: 3px solid #d3ad7f;
 }
 .grid__card1{
+    position: relative;
     background-image: url("../img/movil3-comprimido.jpg");
-    height: 20rem;
+    height: 15rem;
+}
+.grid__card1::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .4);
+    
 }
 .grid__card2{
+    position: relative;
     background-image: url("../img/movil2-comprimido.jpg");
     height: 15rem;
 }
+.grid__card2::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .4);
+    
+}
 .grid__card3{
+    position: relative;
     background-image: url("../img/movil1-comprimido.jpg");
-    height: 20rem;
+    height: 15rem;
+}
+.grid__card3::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .4);
+    
 }
 .grid__card h5{
-    font-size: 1.9rem;
-    color: #d3ad7f;
+    font-size: 1.5rem;
+    color: #d99a07;
     font-weight: 600;
 }
 .grid__card h4{
-    font-size: 1.5rem;
-    color:#010103;
+    font-size: 1.2rem;
+    color:#fc5406;
     font-weight: 600;
 }
 .grid__precio{
@@ -263,68 +325,109 @@ main{
     font-size: 30px;
     width: 0;
     font-weight: 600;
+    margin-bottom: 1rem;
 }
-.btn{
-    border: 3px solid #010103;
+.btn_grid{
+    position: relative;
+    padding:.2rem 1rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #fff;
+    background: #010103;
+    text-decoration: none;
+    cursor: pointer;
+    width: 120px;
+    border: 3px solid #fc5406;
+    border-radius: 3rem;
+}
+.btn_grid:hover{
+    color: #010103;
+    background: #fff;
 }
 /*---------------PRODUCTOS--------------*/
 
 .producto__titulo h1{
+    margin-bottom: 45px;
     font-size: 2rem;
     text-align: center;
     text-transform: uppercase;
     color: #fff;
 }
-
-
-.producto{
-    display: flex;
-    flex-direction: column;
-    gap: 5rem;
-}
-
 .caja{
     display: flex;
-    flex-direction:column;
-    gap: 1.5rem;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
 }
-
 .tarjeta{
-   flex: 1;
-   text-align: center;  
+    display: flex;
+    width: 45%;
+    height: 10%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 9px;
+    border:solid #d99a07;
+    background-color: #010103;
+    padding-top: 50px;
+    padding-bottom: 40px;
+    flex: 1;
+   
 }
-
-.tarjetas{
-    padding: 2rem;
-}
-
-.imagen img{
-    height: 13rem;
+.tarjeta__imagen{
+    width: 55%;
     transition: 1s;
+    opacity: 0.8;
 }
-.imagen img:hover{
+.tarjeta__imagen:hover{
     transform: scale(1.1) translateY(-25px);
-    box-shadow: rgba(251, 253, 254, 0.861) 0px 10px 50px;
+    box-shadow: rgba(251, 253, 254, 0.861) 0px 5px 30px;
+}
+.tarjetas{
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+    width: 85%;
+    margin-top: 20px;
 }
 .tarjetas h4{
     color: #d3ad7f;
-    font-size: 1rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 600;
 }
 .tarjetas p{
-    font-size: 1rem;
+    font-size: 0.75rem;
     color: #fff;
 }
 .tarjeta__precio{
     color: #fff;
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 .tarjeta__precio span{
+    color: #fc5406;
     text-decoration: line-through;
     font-weight: lighter;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
-.tarjetas .btn{
-    border:1px solid #d3ad7f;
+.btn_tarjetas{
+    background: #010103;
+    color: #d99a07;
+    border:3px solid #fff;
+    padding:.2rem 1rem;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    width: 120px;
+    border-radius: 3rem;
+    margin-top: 15px;
+}
+.btn_tarjetas:hover{
+    color: #fff;
+    background: #d99a07;
 }
 
 /*---------------CONTACTO----------*/
@@ -360,7 +463,7 @@ main{
 .contact-form form label {
     display: block;
 }
-.contact-form form p {
+.contact-form form div {
     margin: 0;
     padding: 1em;
 }
@@ -378,16 +481,25 @@ main{
     outline: 0;
     border-bottom: 1px solid #d3ad7f;
 }
-.block .btn{
-    background: transparent;
-    border: 2px solid #d3ad7f;
+.block .btn_block{
+    padding:.2rem 1rem;
+    margin-left: 25%;
+    font-size: 1rem;
     text-transform: uppercase;
-    padding: 1em;
+    color: #d99a07;
+    font-weight: 600;
+    background: #010103;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    width: 130px;
+    border: 3px solid #fff;
+    border-radius: 3rem;
 }
-.block .btn:hover {
+.block .btn_block:hover {
     background: #fff;
     color: #010103;
-    cursor: pointer;
+    border: 3px solid #d99a07;
 }
 
 /*------contacto info-----*/
@@ -410,10 +522,6 @@ ul {
 
 
 
-
-
-
-
 /*--------------Desktop-----------------*/
 
 @media (min-width:800px){
@@ -425,19 +533,26 @@ ul {
     /*-----INICIO-----*/
    
     .inicio{
+        position: relative;
         background-image: url("../img/inicio-comprimida.jpg");
         padding: 6rem 2rem;
         min-height: 100vh;
         background-position: center;
        
     }
-    
-    
+    .inicio::before{
+        position: absolute;
+        content: "";
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, .3);
+        
+    }
     .inicio .content{
         max-width:50rem ;
     }
-    
-    
     .inicio .content h1{
         font-size: 4rem;
         color: #d3ad7f;
@@ -446,14 +561,17 @@ ul {
         color: #fff;
     }
     .btn{
-        background: #010103;
+        background: #d3ad7f;
+        color: #fff;
         font-size: 1.5rem;
-        width: 25%;
+        width: 20%;
+        border: 2px solid #fff;
+        
     }
     .btn:hover{
-        background: #fff;
+        background:#fff ;
         color: #010103;
-        border: 3px solid #d3ad7f;
+        border: 2px solid #010103;
     }
     /*---------NOSOTRSO--------*/
 
@@ -470,33 +588,40 @@ ul {
         grid-template-columns: repeat(8,1fr);
     }
     .abaut > img{
-        max-width: 100%;
+        max-width: 80%;
         grid-column: 1/6;
         grid-row: 1/3;
         border-radius: 5px;
+        opacity: 0.6;
     }
     .abaut__info{
-        grid-column: 5/9;
+        grid-column: 4/9;
         grid-row: 2/3;
-        background-color: #010103;
-        padding: 4rem;
+        background:linear-gradient(-45deg,#fc5406,#4f362b,#010103);
+        padding: 2rem;
         text-align: center;
         border-radius: 1px;
     } 
     .abaut__info:hover{
         cursor: pointer;
-        background: linear-gradient(-45deg,#fc5406,#4f362b,#010103);
+        background: #010103;
     } 
     .abaut__info h2{
-        font-size: 2.3rem;
+        font-size: 2rem;
         text-align: center;
+        font-weight: 600;
     }
     .abaut__info p{
-        font-style: 1rem;
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
     } 
-    .abaut__info .btn{
-        border:none;
-        background-color: #d3ad7f;
+    .btn_info{
+        color: #d99a07;
+        background: #010103;
+    }
+    .btn_info:hover{
+        color: #fff;
+        background: #d99a07;
     }
 
     /*---------MENU---------*/
@@ -508,15 +633,17 @@ ul {
     }
     .grid__card h5{
         font-size: 3rem;
-        color: #fff;
+        color: #d99a07;
     }
     .grid__card h4{
         font-size: 2rem;
+        color:#fff;
         
     }
     .grid__precio{
-        font-size: 30px;
+        font-size: 45px;
         text-align: center;
+        color: #fc5406;
     }
     .grid{
         display: grid;
@@ -529,24 +656,54 @@ ul {
         gap: 3rem;
     }
     .grid__card1{
+        position: relative;
         grid-area: card1;
         background-image: url("../img/-comprimido.jpg");
         height: 400px;
         padding: 4rem;
     }
-     .grid__card2{
+    .grid__card1::before{
+        position: absolute;
+        content: "";
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, .4);
+        
+    }
+    .grid__card2{
+        position: relative;
         grid-area: card2;
         background-image: url("../img/menu2-comprimido.jpg");
         height: 20rem;
         padding: 2rem;
     }
-     .grid__card3{
+    .grid__card2::before{
+        position: absolute;
+        content: "";
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, .4);
+        
+    }
+    .grid__card3{
+        position: relative;
         grid-area: card3;
         background-image: url("../img/menu3-comprimida.jpg");
+        height: 20rem;
         padding: 2rem;
     }
-    .grid__card .btn{
-        background: linear-gradient(-45deg,#fc5406,#4f362b,#010103);
+    .grid__card3::before{
+        position: absolute;
+        content: "";
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, .4); 
     }
 
     /*------------PRODUCTOS----------*/
@@ -557,40 +714,27 @@ ul {
         padding-bottom: 2rem;   
     }
     .caja{
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-        gap:1rem;
+        flex-wrap: nowrap;
+        margin-left: auto;
+        margin-right: auto;
     }
-    .imagen{
-        padding: 2rem 0;
+    .tarjeta{
+        width: 25%;
     }
-    .imagen img{
-        height: 15rem;
-        transition: 1s;
+    .tarjeta__imagen{
+        width: 75%;
     }
-    .imagen img:hover{
-        transform: scale(1.1) translateY(-25px);
-        box-shadow: rgba(251, 253, 254, 0.861) 0px 10px 50px;
+    .tarjeta h4{
+        font-size: 1.8rem;
     }
-    .tarjetas h4{
-        font-size: 2rem;
-    }
-     .tarjetas p{
-        font-size: .0.7rem;
-    }
-    .tarjeta__precio{
-        font-size: 2.5rem;
+    .tarjeta p{
+        font-size: 1.3rem;
     }
     .tarjeta__precio span{
-        color: #d3ad7f;
-        text-decoration: line-through;
-        font-weight: lighter;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
-    .tarjetas .btn{
-        width: 50%;
-        border: 0;
-        border: 2px solid #d3ad7f;
+    .btn_tarjetas{
+        margin-left:25% ;
     }
     /*---------contacto-------*/
     
@@ -599,7 +743,6 @@ ul {
         color: #d3ad7f;
         padding-bottom: 4rem;
     }
-
     .contact-wrapper {
         display: grid;
         grid-template-columns: 2fr 1fr;
@@ -614,7 +757,12 @@ ul {
     .contact-info ul,
     .contact-info p {
         text-align: center;
-        font-size: 1.2rem;
+        font-size: 1rem;
         padding: 2rem;
+    }
+    .block .btn_block{
+        font-size: 20px;
+        margin-left: 40%;
+        margin-top: 10%;
     }
 }

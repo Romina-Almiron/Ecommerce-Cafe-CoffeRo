@@ -13,6 +13,8 @@ $colores:(
     fondo:#010103,
     primercolor:#fff,
     segundocolor:#d3ad7f,
+    cuartocolor:#fc5406,
+    quintocolor:#d99a07,
     tituloinicio:#fff,
     span1:#d3ad7f,
     span2:#fff,
@@ -20,20 +22,25 @@ $colores:(
     footercopy:#d3ad7f,
     nosotrosh2:#d3ad7f,
     nosotrosp:#fff,
-    menuh5:#d3ad7f,
-    menuh4:#010103,
+    nosotrosbtn:#d99a07,
+    menuh5:#d99a07,
+    menuh4:#fc5406,
+    contacto:#d99a07,
     gridprecio:#fff,
     infocolor:#fff,
     borde1:rgb(255, 255, .3),
     borde2:#d3ad7f,
     borde3:#fff,
     borde4:#010103,
+    borde:#fc5406,
     borde5:linear-gradient(-45deg,#fc5406,#4f362b,#010103),
+    borde6:#d99a07,
     btncolor1:#fff,
     btncolor2:#010103,
     btnfondo1:#d3ad7f,
     btnfondo2:#010103,
     btnfondo3:#fff,
+    btnfondo4:#d99a07,
 );
 
 
@@ -69,24 +76,74 @@ $colores:(
 }
 //boton menu//
 %boton{
+    position: relative;
     border: 3px solid map-get($colores, borde4);
     padding:.2rem 1rem;
     font-size: 1rem;
+    text-transform: uppercase;
+    text-decoration: none;
     font-weight: 600;
     color: map-get($colores, btncolor1);
+    background:map-get($colores, btnfondo2); 
     cursor: pointer;
     margin-top: 1rem;
     width: 120px;
+    border: 3px solid map-get($colores, borde);
+    border-radius: 3rem;
 
     &:hover{
-        background:map-get($colores, btnfondo1 );
+        background:map-get($colores, btnfondo3 );
         color:map-get($colores, btncolor2 ); 
     }
 }
+//boton nosotros//
+%nosotros{
+    padding:.2rem 1rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: map-get($colores, btncolor1);
+    font-weight: 600;
+    background: map-get($colores, btnfondo4);
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    width: 130px;
+    border: 3px solid map-get($colores, borde3);
+    border-radius: 3rem;
+
+    &:hover{
+        color: map-get($colores , nosotrosbtn );
+        background: map-get($colores, btnfondo2);
+    }
+}
+// boton contacto//
+%contacto{
+    padding:.2rem 1rem;
+    margin-left: 25%;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: map-get($colores, contacto );
+    font-weight: 600;
+    background: map-get($colores, btnfondo2 );
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    width: 130px;
+    border: 3px solid map-get($colores, borde3);
+    border-radius: 3rem;
+
+    &:hover{
+        background: map-get($colores, btnfondo3 );
+        color: map-get($colores, fondo );
+        border: 3px solid map-get($colores, borde6 );
+    }
+}
+
 //imagen producto movil//
-%producto1{
-    height: 13rem;
+%producto{
+    width: 55%;
     transition: 1s;
+    opacity: 0.8;
 
     &:hover{
         transform: scale(1.1) translateY(-25px);
@@ -103,6 +160,25 @@ $colores:(
     background: none;
     outline: 0;
     border-bottom: 1px solid #d3ad7f;
+}
+//boton producto//
+%btnproducto{
+    background: map-get($colores, btnfondo2 );
+    color: map-get($colores, quintocolor );
+    border:3px solid map-get($colores, borde3 );
+    padding:.2rem 1rem;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    width: 120px;
+    border-radius: 3rem;
+    margin-top: 15px;
+
+    &:hover{
+        color: map-get($colores, primercolor);
+        background: map-get($colores, btnfondo4 );
+    }
 }
 
 
